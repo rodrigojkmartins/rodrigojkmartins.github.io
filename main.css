@@ -1,0 +1,219 @@
+body {
+    background: #999;
+    font-family: arial;
+    margin-top: 220px;
+}
+
+b, a {
+    color: aquamarine;
+}
+
+.header {
+    padding: 0 0 10px 0;
+    background-image: url("Modelo\ 616x616.jpg");
+    background-size: auto;
+    background-position: center top;
+    filter: drop-shadow(0 0 15px black);
+    box-sizing: border-box;
+    font-family: 'Times New Roman', serif;
+    color: aliceblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20000;
+    width: 100%;
+}
+
+.header div{
+  font-size: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+  flex-direction: row;
+}
+
+.header h1{
+    margin: 5px;
+    -webkit-text-stroke: 1.5px black;
+}
+
+.header img{
+  -webkit-filter: drop-shadow(2px 2px 0 white)
+  drop-shadow(-1px 1px 0 white)
+  drop-shadow(1px -1px 0 white)
+  drop-shadow(-1px -1px 0 white);
+
+  filter: drop-shadow(1px 1px 0 white)
+  drop-shadow(-1px 1px 0 white)
+  drop-shadow(1px -1px 0 white)
+  drop-shadow(-1px -1px 0 white);
+}
+
+#BeGoat img:hover{
+  -webkit-filter: drop-shadow(2px 2px 0 rgb(212, 20, 212))
+  drop-shadow(-1px 1px 0 rgb(212, 20, 212))
+  drop-shadow(1px -1px 0 rgb(212, 20, 212))
+  drop-shadow(-1px -1px 0 rgb(212, 20, 212));
+
+  filter: drop-shadow(1px 1px 0 rgb(212, 20, 212))
+  drop-shadow(-1px 1px 0 rgb(212, 20, 212))
+  drop-shadow(1px -1px 0 rgb(212, 20, 212))
+  drop-shadow(-1px -1px 0 rgb(212, 20, 212));
+}
+
+.header nav ul, p {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+}
+
+.header nav ul li{
+    display: inline-block;
+    width: 22%;
+    text-align: center;
+    flex: auto;
+}
+
+.header nav ul li button{
+  font-size: 20px;
+  background: #666;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: aquamarine;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+}
+
+.header nav ul li button:hover{
+  background: #999;
+}
+
+.slogan{
+  margin-top: -40px;
+  font-family: 'Times New Roman', Times, serif ;
+  font-size: 25px;
+  text-align: center;
+}
+
+.hover-img {
+  background-color: #000;
+  color: rgb(0, 0, 0);
+  display: inline-block;
+  max-width: 320px;
+  min-width: 320px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.hover-img * {
+  box-sizing: border-box;
+  transition: all 0.45s ease;
+}
+
+.hover-img:before,
+.hover-img:after {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top: 30px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 30px solid rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  transition: all 0.3s ease;
+  z-index: 1;
+  opacity: 0;
+  transform: scaleY(2);
+}
+
+.hover-img img {
+  vertical-align: top;
+  max-width: 100%;
+  backface-visibility: hidden;
+}
+
+.hover-img figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1em;
+  opacity: 0;
+  z-index: 2;
+  transition-delay: 0.1s;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hover-img:hover:before,
+.hover-img:hover:after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.hover-img:hover > img {
+  opacity: 0.7;
+}
+
+.hover-img:hover figcaption {
+  opacity: 1;
+}
+
+footer{
+  font-family: 'Courier New', Courier, monospace;
+  width: 99%;
+  margin-top: 7.5%;
+}
+
+.zig-zag { border: none;
+  width: 100%;
+  margin: auto;
+  height: 10px;
+  background: linear-gradient(135deg, #999 25%, transparent 25%) -5px 0,
+  linear-gradient(225deg, #999 25%, transparent 25%) -5px 0,
+  linear-gradient(315deg, #999 25%, transparent 25%),
+  linear-gradient(45deg, #999 25%, transparent 25%);
+  background-size: 10.5px 10.5px;
+  background-color: aquamarine;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  margin-left: 5%;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 30%;
+  max-width: 30%;
+  padding: 0 10px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
